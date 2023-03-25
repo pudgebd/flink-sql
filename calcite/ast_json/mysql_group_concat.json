@@ -1,0 +1,204 @@
+{
+  "keywordList": [],
+  "selectList": [
+    {
+      "names": [
+        "PUB_ID"
+      ],
+      "componentPositions": [
+        {
+          "lineNumber": 1,
+          "columnNumber": 8,
+          "endLineNumber": 1,
+          "endColumnNumber": 13
+        }
+      ],
+      "pos": {
+        "lineNumber": 1,
+        "columnNumber": 8,
+        "endLineNumber": 1,
+        "endColumnNumber": 13
+      }
+    },
+    {
+      "operator": {
+        "distinctOptionality": "OPTIONAL",
+        "syntax": "ORDERED_FUNCTION",
+        "allowsNullTreatment": false,
+        "allowsSeparator": true,
+        "requiresOrder": false,
+        "requiresOver": false,
+        "requiresGroupOrder": "FORBIDDEN",
+        "category": "SYSTEM",
+        "name": "GROUP_CONCAT",
+        "kind": "GROUP_CONCAT",
+        "leftPrec": 100,
+        "rightPrec": 100,
+        "returnTypeInference": {
+          "arg$1": {
+            "rule": {
+              "ordinal": 0
+            },
+            "transforms": [
+              {}
+            ]
+          },
+          "arg$2": {}
+        },
+        "operandTypeChecker": {
+          "allowedRules": [
+            {},
+            {}
+          ],
+          "composition": "OR"
+        }
+      },
+      "operands": [
+        {
+          "names": [
+            "CATE_ID"
+          ],
+          "componentPositions": [
+            {
+              "lineNumber": 1,
+              "columnNumber": 37,
+              "endLineNumber": 1,
+              "endColumnNumber": 43
+            }
+          ],
+          "pos": {
+            "lineNumber": 1,
+            "columnNumber": 37,
+            "endLineNumber": 1,
+            "endColumnNumber": 43
+          }
+        },
+        [
+          {
+            "names": [
+              "CATE_ID"
+            ],
+            "componentPositions": [
+              {
+                "lineNumber": 1,
+                "columnNumber": 55,
+                "endLineNumber": 1,
+                "endColumnNumber": 61
+              }
+            ],
+            "pos": {
+              "lineNumber": 1,
+              "columnNumber": 55,
+              "endLineNumber": 1,
+              "endColumnNumber": 61
+            }
+          }
+        ],
+        {
+          "operator": {
+            "name": "SEPARATOR",
+            "kind": "SEPARATOR",
+            "leftPrec": 21,
+            "rightPrec": 20,
+            "returnTypeInference": {
+              "ordinal": 0
+            },
+            "operandTypeInference": {},
+            "operandTypeChecker": {
+              "families": [
+                "ANY"
+              ],
+              "optional": {}
+            }
+          },
+          "operands": [
+            {
+              "typeName": "CHAR",
+              "value": {
+                "stringValue": " "
+              },
+              "pos": {
+                "lineNumber": 1,
+                "columnNumber": 77,
+                "endLineNumber": 1,
+                "endColumnNumber": 79
+              }
+            }
+          ],
+          "expanded": false,
+          "pos": {
+            "lineNumber": 1,
+            "columnNumber": 67,
+            "endLineNumber": 1,
+            "endColumnNumber": 79
+          }
+        }
+      ],
+      "functionQuantifier": {
+        "typeName": "SYMBOL",
+        "value": "DISTINCT",
+        "pos": {
+          "lineNumber": 1,
+          "columnNumber": 28,
+          "endLineNumber": 1,
+          "endColumnNumber": 35
+        }
+      },
+      "expanded": false,
+      "pos": {
+        "lineNumber": 1,
+        "columnNumber": 15,
+        "endLineNumber": 1,
+        "endColumnNumber": 80
+      }
+    }
+  ],
+  "from": {
+    "names": [
+      "BOOK_MAST"
+    ],
+    "componentPositions": [
+      {
+        "lineNumber": 1,
+        "columnNumber": 87,
+        "endLineNumber": 1,
+        "endColumnNumber": 95
+      }
+    ],
+    "pos": {
+      "lineNumber": 1,
+      "columnNumber": 87,
+      "endLineNumber": 1,
+      "endColumnNumber": 95
+    }
+  },
+  "groupBy": [
+    {
+      "names": [
+        "PUB_ID"
+      ],
+      "componentPositions": [
+        {
+          "lineNumber": 1,
+          "columnNumber": 106,
+          "endLineNumber": 1,
+          "endColumnNumber": 111
+        }
+      ],
+      "pos": {
+        "lineNumber": 1,
+        "columnNumber": 106,
+        "endLineNumber": 1,
+        "endColumnNumber": 111
+      }
+    }
+  ],
+  "windowDecls": [],
+  "hints": [],
+  "pos": {
+    "lineNumber": 1,
+    "columnNumber": 1,
+    "endLineNumber": 1,
+    "endColumnNumber": 111
+  }
+}

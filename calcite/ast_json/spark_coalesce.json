@@ -1,0 +1,157 @@
+{
+  "keywordList": [],
+  "selectList": [
+    {
+      "names": [
+        ""
+      ],
+      "componentPositions": [
+        {
+          "lineNumber": 1,
+          "columnNumber": 8,
+          "endLineNumber": 1,
+          "endColumnNumber": 8
+        }
+      ],
+      "pos": {
+        "lineNumber": 1,
+        "columnNumber": 8,
+        "endLineNumber": 1,
+        "endColumnNumber": 8
+      }
+    },
+    {
+      "operator": {
+        "name": "AS",
+        "kind": "AS",
+        "leftPrec": 20,
+        "rightPrec": 21,
+        "returnTypeInference": {
+          "ordinal": 0
+        },
+        "operandTypeInference": {},
+        "operandTypeChecker": {
+          "families": [
+            "ANY",
+            "IGNORE"
+          ],
+          "optional": {}
+        }
+      },
+      "operands": [
+        {
+          "operator": {
+            "category": "USER_DEFINED_FUNCTION",
+            "sqlIdentifier": {
+              "names": [
+                "COALESCE"
+              ],
+              "pos": {
+                "lineNumber": 1,
+                "columnNumber": 11,
+                "endLineNumber": 1,
+                "endColumnNumber": 18
+              }
+            },
+            "name": "COALESCE",
+            "kind": "OTHER_FUNCTION",
+            "leftPrec": 100,
+            "rightPrec": 100
+          },
+          "operands": [
+            {
+              "names": [
+                "ID"
+              ],
+              "componentPositions": [
+                {
+                  "lineNumber": 1,
+                  "columnNumber": 20,
+                  "endLineNumber": 1,
+                  "endColumnNumber": 21
+                }
+              ],
+              "pos": {
+                "lineNumber": 1,
+                "columnNumber": 20,
+                "endLineNumber": 1,
+                "endColumnNumber": 21
+              }
+            },
+            {
+              "names": [
+                "NUMBER"
+              ],
+              "componentPositions": [
+                {
+                  "lineNumber": 1,
+                  "columnNumber": 24,
+                  "endLineNumber": 1,
+                  "endColumnNumber": 29
+                }
+              ],
+              "pos": {
+                "lineNumber": 1,
+                "columnNumber": 24,
+                "endLineNumber": 1,
+                "endColumnNumber": 29
+              }
+            }
+          ],
+          "expanded": false,
+          "pos": {
+            "lineNumber": 1,
+            "columnNumber": 11,
+            "endLineNumber": 1,
+            "endColumnNumber": 30
+          }
+        },  
+        {
+          "names": [
+            "NEWCOLUMN"
+          ],
+          "pos": {
+            "lineNumber": 1,
+            "columnNumber": 35,
+            "endLineNumber": 1,
+            "endColumnNumber": 43
+          }
+        }
+      ],
+      "expanded": false,
+      "pos": {
+        "lineNumber": 1,
+        "columnNumber": 11,
+        "endLineNumber": 1,
+        "endColumnNumber": 43
+      }
+    }
+  ],
+  "from": {
+    "names": [
+      "TEMP_TABLE"
+    ],
+    "componentPositions": [
+      {
+        "lineNumber": 1,
+        "columnNumber": 50,
+        "endLineNumber": 1,
+        "endColumnNumber": 59
+      }
+    ],
+    "pos": {
+      "lineNumber": 1,
+      "columnNumber": 50,
+      "endLineNumber": 1,
+      "endColumnNumber": 59
+    }
+  },
+  "windowDecls": [],
+  "hints": [],
+  "pos": {
+    "lineNumber": 1,
+    "columnNumber": 1,
+    "endLineNumber": 1,
+    "endColumnNumber": 59
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "keywordList": {
+    "list": [],
+    "pos": {
+      "lineNumber": 1,
+      "columnNumber": 1,
+      "endLineNumber": 1,
+      "endColumnNumber": 6
+    }
+  },
+  "selectList": {
+    "list": [
+      {
+        "operator": {
+          "name": "AS",
+          "kind": "AS",
+          "leftPrec": 20,
+          "rightPrec": 21,
+          "returnTypeInference": {
+            "ordinal": 0
+          },
+          "operandTypeInference": {},
+          "operandTypeChecker": {
+            "families": [
+              "ANY",
+              "IGNORE"
+            ],
+            "optional": {}
+          }
+        },
+        "operands": [
+          {
+            "operator": {
+              "name": "WITHIN GROUP",
+              "kind": "WITHIN_GROUP",
+              "leftPrec": 100,
+              "rightPrec": 101,
+              "returnTypeInference": {
+                "ordinal": 0
+              },
+              "operandTypeChecker": {
+                "families": [
+                  "ANY",
+                  "IGNORE"
+                ],
+                "optional": {}
+              }
+            },
+            "operands": [
+              {
+                "operator": {
+                  "category": "USER_DEFINED_FUNCTION",
+                  "sqlIdentifier": {
+                    "names": [
+                      "listagg"
+                    ],
+                    "componentPositions": [
+                      {
+                        "lineNumber": 1,
+                        "columnNumber": 8,
+                        "endLineNumber": 1,
+                        "endColumnNumber": 14
+                      }
+                    ],
+                    "pos": {
+                      "lineNumber": 1,
+                      "columnNumber": 8,
+                      "endLineNumber": 1,
+                      "endColumnNumber": 14
+                    }
+                  },
+                  "name": "listagg",
+                  "kind": "OTHER_FUNCTION",
+                  "leftPrec": 100,
+                  "rightPrec": 100
+                },
+                "operands": [
+                  {
+                    "names": [
+                      "ename"
+                    ],
+                    "componentPositions": [
+                      {
+                        "lineNumber": 1,
+                        "columnNumber": 16,
+                        "endLineNumber": 1,
+                        "endColumnNumber": 20
+                      }
+                    ],
+                    "pos": {
+                      "lineNumber": 1,
+                      "columnNumber": 16,
+                      "endLineNumber": 1,
+                      "endColumnNumber": 20
+                    }
+                  },
+                  {
+                    "typeName": "CHAR",
+                    "value": {
+                      "stringValue": ","
+                    },
+                    "pos": {
+                      "lineNumber": 1,
+                      "columnNumber": 22,
+                      "endLineNumber": 1,
+                      "endColumnNumber": 24
+                    }
+                  }
+                ],
+                "expanded": false,
+                "pos": {
+                  "lineNumber": 1,
+                  "columnNumber": 8,
+                  "endLineNumber": 1,
+                  "endColumnNumber": 25
+                }
+              },
+              {
+                "list": [
+                  {
+                    "names": [
+                      "sal"
+                    ],
+                    "componentPositions": [
+                      {
+                        "lineNumber": 1,
+                        "columnNumber": 48,
+                        "endLineNumber": 1,
+                        "endColumnNumber": 50
+                      }
+                    ],
+                    "pos": {
+                      "lineNumber": 1,
+                      "columnNumber": 48,
+                      "endLineNumber": 1,
+                      "endColumnNumber": 50
+                    }
+                  }
+                ],
+                "pos": {
+                  "lineNumber": 1,
+                  "columnNumber": 39,
+                  "endLineNumber": 1,
+                  "endColumnNumber": 50
+                }
+              }
+            ],
+            "expanded": false,
+            "pos": {
+              "lineNumber": 1,
+              "columnNumber": 8,
+              "endLineNumber": 1,
+              "endColumnNumber": 51
+            }
+          },
+          {
+            "names": [
+              "name"
+            ],
+            "pos": {
+              "lineNumber": 1,
+              "columnNumber": 52,
+              "endLineNumber": 1,
+              "endColumnNumber": 55
+            }
+          }
+        ],
+        "expanded": false,
+        "pos": {
+          "lineNumber": 1,
+          "columnNumber": 8,
+          "endLineNumber": 1,
+          "endColumnNumber": 55
+        }
+      }
+    ],
+    "pos": {
+      "lineNumber": 1,
+      "columnNumber": 8,
+      "endLineNumber": 1,
+      "endColumnNumber": 55
+    }
+  },
+  "from": {
+    "names": [
+      "emp"
+    ],
+    "componentPositions": [
+      {
+        "lineNumber": 1,
+        "columnNumber": 62,
+        "endLineNumber": 1,
+        "endColumnNumber": 64
+      }
+    ],
+    "pos": {
+      "lineNumber": 1,
+      "columnNumber": 62,
+      "endLineNumber": 1,
+      "endColumnNumber": 64
+    }
+  },
+  "windowDecls": {
+    "list": [],
+    "pos": {
+      "lineNumber": 1,
+      "columnNumber": 1,
+      "endLineNumber": 1,
+      "endColumnNumber": 64
+    }
+  },
+  "hints": {
+    "list": [],
+    "pos": {
+      "lineNumber": 1,
+      "columnNumber": 62,
+      "endLineNumber": 1,
+      "endColumnNumber": 64
+    }
+  },
+  "pos": {
+    "lineNumber": 1,
+    "columnNumber": 1,
+    "endLineNumber": 1,
+    "endColumnNumber": 64
+  }
+}

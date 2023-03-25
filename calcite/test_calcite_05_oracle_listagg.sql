@@ -1,0 +1,1 @@
+select listagg(ename,',')within group(order by sal)name from emp;
