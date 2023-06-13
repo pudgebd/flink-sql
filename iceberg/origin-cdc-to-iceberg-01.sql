@@ -1,4 +1,4 @@
-CREATE TABLE if not exists mf_mapping.dlink_default.cq_dim_mysql (
+CREATE TABLE if not exists mf_mapping.dlink_default.xxx_dim_mysql (
      id bigint,
      channel string,
      name STRING,
@@ -11,11 +11,11 @@ CREATE TABLE if not exists mf_mapping.dlink_default.cq_dim_mysql (
      'username' = 'root',
      'password' = '123456',
      'database-name' = 'cdc',
-     'table-name' = 'cq_dim_mysql',
+     'table-name' = 'xxx_dim_mysql',
      'scan.startup.mode' = 'latest-offset'
 );
      
-CREATE TABLE IF NOT EXISTS linkhouse.mf_cq.upsert_no_primary_key(
+CREATE TABLE IF NOT EXISTS linkhouse.mf_xxx.upsert_no_primary_key(
      id bigint,
      channel string,
      name STRING,
@@ -26,4 +26,4 @@ CREATE TABLE IF NOT EXISTS linkhouse.mf_cq.upsert_no_primary_key(
     'table_type' = 'iceberg'
 );
 
-insert into linkhouse.mf_cq.upsert_no_primary_key select * from mf_mapping.dlink_default.cq_dim_mysql;
+insert into linkhouse.mf_xxx.upsert_no_primary_key select * from mf_mapping.dlink_default.xxx_dim_mysql;

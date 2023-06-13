@@ -27,7 +27,7 @@ CREATE TABLE mysql_alert_self_buy_sell(
 ) WITH (
    'connector' = 'jdbc',
    'url' = 'jdbc:mysql://192.168.1.59:3306/stream_dev?charset=utf8',
-   'table-name' = 'cq_alert_self_buy_sell',
+   'table-name' = 'xxx_alert_self_buy_sell',
    'username' = 'stream_dev',
    'password' = 'stream_dev',
    'lookup.cache.max-rows' = '5000',

@@ -31,25 +31,25 @@ CREATE CATALOG mypg WITH(
 );
 
 -- 这种写法，原生不支持 lookup.cache.max-rows
-CREATE TABLE cq_dim_pg (
+CREATE TABLE xxx_dim_pg (
     channel STRING,
     name STRING
  )WITH(
    'connector' = 'jdbc-hz',
-   'table-name' = 'cq_dim_pg',
+   'table-name' = 'xxx_dim_pg',
    'lookup.cache.max-rows' = '3214',
    'lookup.cache.ttl' = '1min'
  );
 */
 
 
-CREATE TABLE cq_dim_pg (
+CREATE TABLE xxx_dim_pg (
     channel STRING,
     name STRING
  )WITH(
    'connector' = 'jdbc-hz',
    'url' = 'jdbc:postgresql://localhost:5432/mydb',
-   'table-name' = 'cq_dim_pg',
+   'table-name' = 'xxx_dim_pg',
    'username' = 'postgres',
    'password' = 'postgres',
    'lookup.cache.max-rows' = 'all',
@@ -58,7 +58,7 @@ CREATE TABLE cq_dim_pg (
 
 
 -- `mypg`.`mydb`.
-insert into print_table select k.channel, d.name from MyKafkaSrc02 k left join cq_dim_pg FOR SYSTEM_TIME AS OF k.proctime AS d on k.channel = d.channel 
+insert into print_table select k.channel, d.name from MyKafkaSrc02 k left join xxx_dim_pg FOR SYSTEM_TIME AS OF k.proctime AS d on k.channel = d.channel
 GROUP BY HOP(k.proctime, INTERVAL '1' SECONDS,  INTERVAL '1' SECONDS), k.channel, d.name;
 
 /*
@@ -68,13 +68,13 @@ b
 */
 
 /**
-CREATE TABLE cq_dim_pg (
+CREATE TABLE xxx_dim_pg (
     channel STRING,
     name STRING
  )WITH(
    'connector' = 'jdbc',
    'url' = 'jdbc:postgresql://localhost:5432/mydb?charset=utf8',
-   'table-name' = 'cq_dim_pg',
+   'table-name' = 'xxx_dim_pg',
    'username' = 'postgres',
    'password' = 'postgres',
    'lookup.cache.max-rows' = 'all',
@@ -83,8 +83,8 @@ CREATE TABLE cq_dim_pg (
 
 
 
--- `mypg`.`mydb`.cq_dim_pg
-insert into print_table select k.channel, d.name from MyKafkaSrc02 k left join cq_dim_pg FOR SYSTEM_TIME AS OF k.proctime AS d on k.channel = d.channel 
+-- `mypg`.`mydb`.xxx_dim_pg
+insert into print_table select k.channel, d.name from MyKafkaSrc02 k left join xxx_dim_pg FOR SYSTEM_TIME AS OF k.proctime AS d on k.channel = d.channel
 GROUP BY TUMBLE(k.proctime, INTERVAL '1' SECONDS), k.channel, d.name;
 */
 

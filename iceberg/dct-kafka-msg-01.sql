@@ -20,7 +20,7 @@ CREATE TABLE MyDimMysql(
  )WITH(
    'connector' = 'jdbc',
    'url' = 'jdbc:mysql://10.201.0.205:3306/test?charset=utf8',
-   'table-name' = 'cq_dim_mysql',
+   'table-name' = 'xxx_dim_mysql',
    'username' = 'root',
    'password' = '123456',
    'lookup.cache.max-rows' = '1000',

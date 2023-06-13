@@ -64,14 +64,14 @@ CREATE TABLE kafka_scene_03_output(
  );
  */
 
-CREATE TABLE CqDimMysql(
+CREATE TABLE xxxDimMysql(
     channel STRING,
     name STRING,
     score double
  ) WITH (
    'connector' = 'jdbc',
    'url' = 'jdbc:mysql://10.201.0.205:3306/test?charset=utf8',
-   'table-name' = 'cq_dim_mysql',
+   'table-name' = 'xxx_dim_mysql',
    'username' = 'root',
    'password' = '123456',
    'lookup.cache.max-rows' = '1000',
@@ -81,7 +81,7 @@ CREATE TABLE CqDimMysql(
 /*
 create view my_view (sec_code, trade_price, trade_vol, buy_acct_id, sell_acct_id, score) as 
 select oc.sec_code, first_value(oc.trade_price) as trade_price, first_value(oc.trade_vol) as trade_vol, first_value(oc.buy_acct_id) as buy_acct_id, first_value(oc.sell_acct_id) as sell_acct_id, first_value(hd.score) as score from kafka_stock_order_confirm oc 
-left join CqDimMysql hd on oc.sec_code = hd.channel group by oc.sec_code;
+left join xxxDimMysql hd on oc.sec_code = hd.channel group by oc.sec_code;
 */
 
 create view my_view (sec_code, trade_price, trade_vol, buy_acct_id, sell_acct_id, score) as 

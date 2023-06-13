@@ -38,7 +38,7 @@ WITH (
     cf ROW<name STRING>
  )WITH(
    'connector' = 'hbase-1.4',
-   'table-name' = 'hbase_dim:cq_dim_channel_name',  
+   'table-name' = 'hbase_dim:xxx_dim_channel_name',
    'zookeeper.quorum' = 'localhost:2181'
  );
 

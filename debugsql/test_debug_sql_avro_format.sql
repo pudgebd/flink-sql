@@ -34,7 +34,7 @@ CREATE TABLE mysql_avg_price (
 ) WITH (
    'connector' = 'jdbc',
    'url' = 'jdbc:mysql://192.168.1.59:3306/stream_dev?charset=utf8',
-   'table-name' = 'cq_avg_price',
+   'table-name' = 'xxx_avg_price',
    'username' = 'stream_dev',
    'password' = 'stream_dev',
    'lookup.cache.max-rows' = '5000',

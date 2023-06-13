@@ -39,4 +39,4 @@ CREATE CATALOG hive_catalog WITH (
   'property-version'='1'
 );
 
-insert into hive_catalog.cq_cdc_07.t3 select a, b, c, d, ts from t3;
+insert into hive_catalog.xxx_cdc_07.t3 select a, b, c, d, ts from t3;

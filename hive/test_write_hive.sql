@@ -45,7 +45,7 @@ CREATE TABLE MyDimTable (
  )WITH(
    'connector' = 'jdbc',
    'url' = 'jdbc:mysql://192.168.1.59:3306/stream_dev?charset=utf8',
-   'table-name' = 'cq_dim_mysql_9w',
+   'table-name' = 'xxx_dim_mysql_9w',
    'username' = 'stream_dev',
    'password' = 'stream_dev',
    'lookup.cache.max-rows' = 'all',

@@ -6,36 +6,29 @@ CREATE CATALOG hive_catalog WITH (
   'property-version'='1'
 );
 
-CREATE TABLE `hive_catalog`.`cq_cdc_07`.`brand` (
-     id INT NOT NULL, 
-     brand_no STRING NOT NULL, 
-     name STRING NOT NULL, 
-     en_name STRING, 
-     en_short_name STRING, 
-     opcode STRING, 
-     category STRING NOT NULL, 
-     belonger STRING NOT NULL, 
-     status STRING, 
-     sys_no STRING NOT NULL, 
-     search_code STRING, 
-     parent_brand_id INT, 
-     logo_url STRING, 
-     create_user STRING, 
-     create_time STRING NOT NULL, 
-     update_user STRING, 
-     update_time STRING, 
-     remark STRING, 
-     time_seq BIGINT, 
-     organ_type_no STRING, 
-     primary key(id)  NOT ENFORCED
+
+CREATE TABLE `hive_catalog`.`xxx_cdc_07`.`mk`(
+     `id` INT NOT NULL, 
+     `a` INT, 
+     `b` INT, 
+     `c` BIGINT, 
+     `d` FLOAT, 
+     `e` DOUBLE, 
+     `g` DOUBLE, 
+     `h` DECIMAL(10, 0), 
+     `j` STRING, 
+     `k` STRING, 
+     `l` BYTES, 
+     `m` BYTES, 
+     `o` STRING, 
+     primary key(`id`)  NOT ENFORCED
 ) WITH ( 
      'format-version' = '2', 
-     'write.upsert.enabled' = 'true', 
      'table_type' = 'iceberg'
 );
 
 /*
-CREATE TABLE `hive_catalog`.`cq_cdc_07`.`my_ka_09`(
+CREATE TABLE `hive_catalog`.`xxx_cdc_07`.`my_ka_09`(
      id INT NOT NULL, 
      name STRING, 
      dt DATE, 
@@ -59,7 +52,7 @@ CREATE TABLE `hive_catalog`.`cq_cdc_07`.`my_ka_09`(
 */
 
 /*
-CREATE TABLE `hive_catalog`.`cq_cdc_07`.`test_507` (
+CREATE TABLE `hive_catalog`.`xxx_cdc_07`.`test_507` (
 `id` INT NOT NULL,
 `name` string,
 `sex` string,
@@ -78,7 +71,7 @@ CREATE TABLE `hive_catalog`.`cq_cdc_07`.`test_507` (
 'table_type' = 'iceberg'
 );
 
-CREATE TABLE `hive_catalog`.`cq_cdc_07`.`test_507` (
+CREATE TABLE `hive_catalog`.`xxx_cdc_07`.`test_507` (
 `id` INT NOT NULL,
 `name` string,
 `sex` string,

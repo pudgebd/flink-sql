@@ -38,7 +38,7 @@ CREATE TABLE mysql_avg_price (
 ) WITH (
    'connector' = 'jdbc',
    'url' = 'jdbc:mysql://localhost:3306/utf8?useUnicode=true&characterEncoding=UTF-8',
-   'table-name' = 'cq_avg_price',
+   'table-name' = 'xxx_avg_price',
    'username' = 'root',
    'password' = '123456',
    'lookup.cache.max-rows' = '5000',
@@ -56,7 +56,7 @@ CREATE TABLE mysql_avg_price_gbk (
 ) WITH (
    'connector' = 'jdbc',
    'url' = 'jdbc:mysql://localhost:3306/gbk?useUnicode=true&characterEncoding=gbk',
-   'table-name' = 'cq_avg_price_gbk',
+   'table-name' = 'xxx_avg_price_gbk',
    'username' = 'root',
    'password' = '123456',
    'lookup.cache.max-rows' = '5000',

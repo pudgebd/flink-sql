@@ -27,11 +27,11 @@ CREATE TABLE MyDimTable(
     score double
  )WITH(
    'connector' = 'csv-hz',
-   'hdfs.path' = '/Users/xxx/work_doc/sqls/flink_sql/debugsql/data/cq_dim_mysql.csv'
+   'hdfs.path' = '/Users/xxx/work_doc/sqls/flink_sql/debugsql/data/xxx_dim_mysql.csv'
  );-- localhost  cdh601
 /*
-hdfs://cdh601:8020/user/work/test/cq_dim_mysql.csv
-/Users/xxx/work_doc/sqls/flink_sql/debugsql/data/cq_dim_mysql.csv
+hdfs://cdh601:8020/user/work/test/xxx_dim_mysql.csv
+/Users/xxx/work_doc/sqls/flink_sql/debugsql/data/xxx_dim_mysql.csv
 */
 
 CREATE TABLE print_table01(

@@ -26,24 +26,24 @@ CREATE CATALOG mypg WITH(
 );
 
 
-CREATE TABLE `mypg`.`mydb`.cq_dim_pg (
+CREATE TABLE `mypg`.`mydb`.xxx_dim_pg (
     channel STRING,
     name STRING
  )WITH(
    'connector' = 'jdbc',
-   'table-name' = 'cq_dim_pg',
+   'table-name' = 'xxx_dim_pg',
    'lookup.cache.max-rows' = '5000',
    'lookup.cache.ttl' = '1min'
  );
 */
 
-CREATE TABLE cq_dim_pg (
+CREATE TABLE xxx_dim_pg (
     channel STRING,
     name STRING
  )WITH(
    'connector' = 'jdbc-hz',
    'url' = 'jdbc:pivotal:greenplum://192.168.1.129:5432;DatabaseName=mydb',
-   'table-name' = 'cq_dim_pg',
+   'table-name' = 'xxx_dim_pg',
    'username' = 'gpadmin',
    'password' = 'gpadmin',
    'lookup.cache.max-rows' = 'all',
@@ -55,11 +55,11 @@ CREATE TABLE print_table(
     name STRING
 ) WITH ('connector' = 'print');
 
--- `mypg`.`mydb`.cq_dim_pg
-insert into print_table select k.channel, d.name from MyKafkaSrc02 k left join cq_dim_pg FOR SYSTEM_TIME AS OF k.proctime AS d on k.channel = d.channel 
+-- `mypg`.`mydb`.xxx_dim_pg
+insert into print_table select k.channel, d.name from MyKafkaSrc02 k left join xxx_dim_pg FOR SYSTEM_TIME AS OF k.proctime AS d on k.channel = d.channel
 GROUP BY TUMBLE(k.proctime, INTERVAL '1' SECONDS), k.channel, d.name;
 
 /**
-insert into print_table select k.channel, d.name from MyKafkaSrc02 k left join `mypg`.`mydb`.cq_dim_pg FOR SYSTEM_TIME AS OF k.proctime AS d on k.channel = d.channel 
+insert into print_table select k.channel, d.name from MyKafkaSrc02 k left join `mypg`.`mydb`.xxx_dim_pg FOR SYSTEM_TIME AS OF k.proctime AS d on k.channel = d.channel
 GROUP BY HOP(k.proctime, INTERVAL '5' SECONDS,  INTERVAL '10' SECONDS), k.channel, d.name;
 */

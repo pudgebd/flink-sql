@@ -21,7 +21,7 @@ CREATE TABLE MyDimTable(
  )WITH(
    'connector' = 'jdbc',
    'url' = 'jdbc:mysql://192.168.1.59:3306/stream_dev?charset=utf8',
-   'table-name' = 'cq_dim_mysql',
+   'table-name' = 'xxx_dim_mysql',
    'username' = 'stream_dev',
    'password' = 'stream_dev',
    'lookup.cache.max-rows' = '5000',
@@ -37,7 +37,7 @@ CREATE TABLE MyTestInsert(
  )WITH(
    'connector' = 'jdbc',
    'url' = 'jdbc:mysql://192.168.1.59:3306/stream_dev?charset=utf8',
-   'table-name' = 'cq_test_insert',
+   'table-name' = 'xxx_test_insert',
    'username' = 'stream_dev',
    'password' = 'stream_dev'
  );
@@ -51,7 +51,7 @@ CREATE TABLE MyTestInsert(
  )WITH(
    'connector' = 'jdbc',
    'url' = 'jdbc:mysql://192.168.1.59:3306/stream_dev?charset=utf8',
-   'table-name' = 'cq_test_insert_2',
+   'table-name' = 'xxx_test_insert_2',
    'username' = 'stream_dev',
    'password' = 'stream_dev'
  );

@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS open_mapping.dlink_default.datagen_source (
     'fields.id.max' = '100000000'
 );
 
-CREATE TABLE IF NOT EXISTS linkhouse.open_cq.test_merge(
+CREATE TABLE IF NOT EXISTS linkhouse.open_xxx.test_merge(
     id    int,
     a1    STRING,
     a2    STRING,
@@ -42,4 +42,4 @@ WITH (
     'flink.auto.rewrite.min-snaps-nums' = '3'
 );
 
-insert into linkhouse.open_cq.test_merge select id, a1, a2, a3, a4, a5, a6, a7, a8, a9, b, c from open_mapping.dlink_default.datagen_source;
+insert into linkhouse.open_xxx.test_merge select id, a1, a2, a3, a4, a5, a6, a7, a8, a9, b, c from open_mapping.dlink_default.datagen_source;
